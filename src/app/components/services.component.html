@@ -1,0 +1,47 @@
+<section id="services" class="services-section">
+  <div class="container">
+    <!-- Section Header -->
+    <div class="section-header">
+      <h2><span class="text-gradient">Our Services</span></h2>
+      <p>Comprehensive wellness packages designed for every need and lifestyle</p>
+    </div>
+
+    <!-- Services Grid -->
+    <div class="services-grid">
+      <div *ngFor="let service of services" class="service-card">
+        <div class="service-icon">{{ service.icon }}</div>
+        <h4>{{ service.title }}</h4>
+        <p>{{ service.description }}</p>
+      </div>
+    </div>
+
+    <!-- Pricing Section -->
+    <!-- <div class="pricing-section">
+      <h2><span class="text-gradient">Simple, Transparent Pricing</span></h2>
+      <p>Choose the perfect plan for your wellness journey</p>
+      
+      <div class="pricing-grid">
+        <div *ngFor="let plan of pricing" class="pricing-card" [class.popular]="plan.popular">
+          <div *ngIf="plan.popular" class="popular-badge">Most Popular</div>
+          <h4>{{ plan.name }}</h4>
+          <p class="plan-description">{{ plan.description }}</p>
+          <div class="price">
+            <span class="amount">{{ plan.price }}</span>
+            <span class="period">{{ plan.period }}</span>
+          </div>
+          <ul class="features-list">
+            <li *ngFor="let feature of plan.features">{{ feature }}</li>
+          </ul>
+          <button
+            class="btn"
+            [ngClass]="plan.popular ? 'btn-primary' : 'btn-secondary'"
+            [ngStyle]="plan.popular ? { 'background-color': '#ffffff', color: '#000000' } : null"
+            [style.width]="'100%'"
+          >
+            Choose Plan
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section> -->

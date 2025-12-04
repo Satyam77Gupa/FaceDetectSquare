@@ -1,0 +1,54 @@
+<section id="fitstreet" class="fitstreet-section">
+  <div class="container">
+    <!-- Section Header -->
+    <div class="section-header">
+      <h2><span class="star-icon"></span> <span class="text-gradient">FitStreet — India's Wellness Ecosystem</span> </h2>
+      <p>In-home fitness, mental wellness, and nutrition services—all in one comprehensive platform</p>
+    </div>
+
+    <!-- Value Proposition -->
+    <div class="value-proposition">
+      <div class="vp-text">
+        <h3 >Why Choose FitStreet?</h3>
+        <div class="benefits-list">
+          <div *ngFor="let benefit of benefits" class="benefit-item">
+            <div class="benefit-icon">{{ benefit.icon }}</div>
+            <div>
+              <h4>{{ benefit.title }}</h4>
+              <p>{{ benefit.description }}</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="vp-image">
+        <div class="image-icon">🏠</div>
+      </div>
+    </div>
+
+    <!-- Three Pillars -->
+    <div class="pillars-section">
+      <h2>Our Three Pillars of Wellness</h2>
+      <div class="pillars-grid">
+        <div *ngFor="let pillar of pillars; let i = index" class="pillar-card" [ngClass]="'pillar-' + (i + 1)">
+          <div class="pillar-header" [style.background]="'linear-gradient(135deg, var(--accent-' + (i === 0 ? 'orange' : i === 1 ? 'purple' : 'green') + ') 0%, var(--accent-' + (i === 0 ? 'orange' : i === 1 ? 'purple' : 'green') + ') 100%)'">
+            <div class="pillar-emoji">{{ pillar.emoji }}</div>
+          </div>
+          <div class="pillar-body" style="border:1px solid black">
+            <h4>{{ pillar.title }}</h4>
+            <ul class="services-list">
+              <li *ngFor="let service of pillar.services">{{ service }}</li>
+            </ul>
+            <button class="btn btn-secondary">Learn More</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- CTA Section -->
+    <div class="fitstreet-cta">
+      <h3 style="color:#ffffff">Transform Your Life with FitStreet</h3>
+      <p style="color:#ffffff">Join thousands of Indians who've already started their wellness journey today</p>
+      <button class="btn btn-primary btn-lg">Book Your First Session Today</button>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,42 @@
+<nav class="navbar">
+  <div class="navbar-container">
+    <div class="navbar-content">
+      <!-- Logo -->
+      <div class="navbar-logo">
+        <div class="logo-icon"><img src="assets/BStreet.png" alt="Ballstreet Logo" width="159" height="10"></div>
+        <div class="logo-text">
+          <span class="logo-main">Ballstreet</span>
+        </div>
+      </div>
+
+      <!-- Desktop Menu -->
+      <div class="navbar-menu desktop-menu">
+        <a href="javascript:void(0)" (click)="scrollToSection('hero')" class="nav-link">Home</a>
+        <a href="javascript:void(0)" (click)="scrollToSection('about')" class="nav-link">About</a>
+        <a href="javascript:void(0)" (click)="scrollToSection('fitstreet')" class="nav-link">FitStreet</a>
+        <a href="javascript:void(0)" (click)="scrollToSection('services')" class="nav-link">Services</a>
+        <a href="javascript:void(0)" (click)="scrollToSection('contact')" class="nav-link">Contact Us</a>
+        <button class="btn btn-primary nav-cta">Get Started</button>
+      </div>
+
+      <!-- Mobile Menu Button -->
+      <button class="mobile-menu-toggle" (click)="toggleMobileMenu()" aria-label="Toggle menu">
+        <span class="hamburger" [class.open]="mobileMenuOpen()">
+          <i></i>
+          <i></i>
+          <i></i>
+        </span>
+      </button>
+    </div>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu" [class.open]="mobileMenuOpen()">
+      <a href="javascript:void(0)" (click)="scrollToSection('hero')" class="mobile-nav-link">Home</a>
+      <a href="javascript:void(0)" (click)="scrollToSection('about')" class="mobile-nav-link">About</a>
+      <a href="javascript:void(0)" (click)="scrollToSection('fitstreet')" class="mobile-nav-link">FitStreet</a>
+      <a href="javascript:void(0)" (click)="scrollToSection('services')" class="mobile-nav-link">Services</a>
+      <a href="javascript:void(0)" (click)="scrollToSection('contact')" class="mobile-nav-link">Contact Us</a>
+      <button class="btn btn-primary w-full">Get Started</button>
+    </div>
+  </div>
+</nav>
